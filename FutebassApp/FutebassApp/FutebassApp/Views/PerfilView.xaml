@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FutebassApp.Views.PerfilView" Title="Meu Perfil">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Orientation="Vertical">
+            <Image Source="{Binding Foto}" />
+            <Label Text="{Binding Nome}" HorizontalTextAlignment="Center" FontSize="Medium" />
+            <Label Text="{Binding Nivel}" HorizontalTextAlignment="Center" FontSize="Medium" />
+            <Label Text="{Binding Cidade}" HorizontalTextAlignment="Center" FontSize="Medium" />
+            <Button Text="Logout" Command="{Binding LogOutCommand}" VerticalOptions="End" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

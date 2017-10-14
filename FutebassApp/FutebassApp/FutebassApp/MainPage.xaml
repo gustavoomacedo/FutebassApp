@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FutebassApp"
+             x:Class="FutebassApp.MainPage"
+             Title="Página Principal">
+    
+    <ScrollView>
+        <StackLayout Padding="60"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand">
+
+            <Label Text="ID do usuário" TextColor="Black" FontSize="Small" />
+            <Label Text="{Binding UserId}" TextColor="Gray" FontSize="Medium" />
+
+            <Label Text="Token do provedor" TextColor="Black" FontSize="Small" />
+            <Label Text="{Binding Token}" TextColor="Gray" FontSize="Medium" />
+
+            <Button Text="Logout" Command="{Binding LogOutCommand}" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

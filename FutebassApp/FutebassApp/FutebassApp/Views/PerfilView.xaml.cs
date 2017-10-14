@@ -1,0 +1,22 @@
+﻿using FutebassApp.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace FutebassApp.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PerfilView : ContentPage
+    {
+        public PerfilView()
+        {
+            InitializeComponent();
+            this.BindingContext = new PerfilViewModel(Navigation);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FutebassApp.Views.AdicaoPartidaView"
+             Title="Adicionar Partida">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
+            <Label Text="Dia" />
+            <Entry Text="{Binding Dia}" Placeholder="06/07/2017" />
+
+            <Label Text="Hora" />
+            <Entry Text="{Binding Hora}" Placeholder="14:00" />
+
+            <Label Text="Tipo" />
+            <Entry Text="{Binding Tipo}" Placeholder="Campo"  />
+
+            <Label Text="Preço" />
+            <Entry Text="{Binding Preco}" Keyboard="Numeric"  />
+
+            <Label Text="Local" />
+            <Entry Text="{Binding Local}" Placeholder="Rua do João" />
+
+            <Label Text="Observações" />
+            <Entry Text="{Binding Observacao}" Placeholder="Valendo um refri" />
+
+            <Button Text="Salvar" Command="{Binding SalvarCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

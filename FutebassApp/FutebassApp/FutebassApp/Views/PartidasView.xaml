@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FutebassApp.Views.PartidasView" Title="Partidas">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_add_white.png" Command="{Binding AddPartidaCommand}"/>
+        <ToolbarItem Icon="ic_person_white.png"  Command="{Binding HistoricoCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
+            <ActivityIndicator Color="#8FE22A" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <Label Text="Partidas Disponíveis" HorizontalTextAlignment="Center" />
+
+            <ListView x:Name="lstPartidas" ItemsSource="{Binding Partidas}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Tipo}" Detail="{Binding Observacao}" TextColor="Black" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
